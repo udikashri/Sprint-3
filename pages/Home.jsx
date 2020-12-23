@@ -1,5 +1,3 @@
-// import { eventBusService } from "../services/eventBusService.js";
-
 export class Home extends React.Component {
     state = {
         headerStyle: {
@@ -12,17 +10,15 @@ export class Home extends React.Component {
         return this.state.headerStyle.fontSize + 'px'
     }
     componentDidMount() {}
-  
+    
 
     render() {
         // Destructering
-        // const color = this.state.headerStyle.color;
-        const {color} = this.state.headerStyle;
+        const color = this.state.headerStyle.color;
         return (
             <section>
                 <h2 style={{color:color, fontSize: this.fontSize}}>
                     Home Sweet Home
-                    <button onClick={this.foo}>Listen</button>
                 </h2>
             </section>
         )
