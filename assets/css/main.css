@@ -9,5 +9,9 @@
 @import './cmps/AppHeader.css';
 @import './cmps/PetFilter.css';
 @import './cmps/PetList.css';
-@import './cmps/PetPreview.css';
+@import './cmps/emailPreview.css';
+
+.title{
+    background-color: brown;
+}
 
