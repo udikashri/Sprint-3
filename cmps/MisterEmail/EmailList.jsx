@@ -1,5 +1,5 @@
-import { EmailPreview } from "./EmailPreview.jsx";
-import { EmailDetails } from "./EmailDetails.jsx";
+import { EmailPreview } from "EmailPreview.jsx";
+import { EmailDetails } from "EmailDetails.jsx";
 
 export function EmailList({ emails, openEmail, onSelectEmail, onDelete }) {
 
@@ -21,8 +21,3 @@ export function EmailList({ emails, openEmail, onSelectEmail, onDelete }) {
     );
 
 }
-
-
-
-
-//        

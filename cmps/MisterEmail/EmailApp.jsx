@@ -1,16 +1,22 @@
 import { emailService } from '../../services/emaillService.js'
-import { EmailList } from './EmailList.jsx'
-import { EmailFilter } from "./EmailFilter.jsx";
+import { EmailList } from 'EmailList.jsx'
+import { EmailFilter } from "EmailFilter.jsx";
+import { EmailStatus } from "EmailStatus.jsx";
+import { EmailCompose } from "EmailCompose.jsx";
+
 
 export class EmailApp extends React.Component {
 
 
     state = {
         emails: [],
-        filterBy: '',
+        filterBy: {
+            string: '',
+            boolean: null
+        },
         selected: null,
-        isList: true
-        
+        isList: true,
+        string: ""
     }
 
     componentDidMount() {
@@ -18,10 +24,20 @@ export class EmailApp extends React.Component {
 
 
     }
+    loadEmails = () => {
+        emailService.query().then(emails => {
+            this.setState({
+                emails: emails,
+            })
+        })
+    }
+    
     onSelectEmail = (emailId) => {
+
         const email = this.state.emails.find(email => {
             return email.id === emailId
         })
+
         const copyEmails = this.state.emails.map(email => {
             if (email.id === emailId) email.isRead = true
             return email
@@ -29,36 +45,33 @@ export class EmailApp extends React.Component {
 
         this.setState({
             selected: email,
-            emails: copyEmails
+            emails: copyEmails,
         })
     }
-    onDelete = (emailId) =>{
+    onDelete = (emailId) => {
         const copyEmails = emailService.deleteEmail(emailId)
         this.setState({ emails: copyEmails })
     }
 
-    loadEmails = () => {
-        emailService.query().then(emails => {
-            this.setState({ emails: emails })
-        })
-    }
+
 
     onSetFilter = (filterBy) => {
-        console.log(filterBy);
-        this.setState({ filterBy });
+        var copyFilterBy = this.state.filterBy;
+        copyFilterBy[typeof filterBy] = filterBy;
+        this.setState({ filterBy: copyFilterBy });
     };
-
+    //subject: 'Wassap?', body:
     getEmailForDisplay = () => {
         const { filterBy } = this.state;
-        if (filterBy) {
-            console.log('in');
-            return this.state.books.filter(book => {
-                return book.title.toLowerCase().includes(filterBy.toLowerCase());
+        if (filterBy.string || filterBy.boolean !== null) {
+            return this.state.emails.filter(email => {
+                return (email.subject.toLowerCase().includes(filterBy.string.toLowerCase()) ||
+                    email.body.toLowerCase().includes(filterBy.string.toLowerCase())) &&
+                    email.isRead === filterBy.boolean;
             });
 
         } else {
-            console.log('else');
-            return this.state.emails
+        return this.state.emails
         }
     };
 
@@ -69,9 +82,11 @@ export class EmailApp extends React.Component {
             <section>
 
                 <h1>email app</h1>
+                <EmailStatus emails={emails} />
                 <EmailFilter setFilter={this.onSetFilter} />
                 <EmailList emails={this.getEmailForDisplay()} openEmail={this.state.selected}
-                    onSelectEmail={this.onSelectEmail} onDelete={this.onDelete}/>
+                    onSelectEmail={this.onSelectEmail} onDelete={this.onDelete} />
+                    <EmailCompose renderEmails={this.loadEmails}/>
             </section>
         )
     }
