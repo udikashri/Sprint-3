@@ -1,10 +1,6 @@
 import { AppHeader } from 'cmps/AppHeader.jsx';
 // import { About } from './pages/About.jsx';
 import { Home } from 'pages/Home.jsx';
-// import { PetApp } from './pages/PetApp.jsx';
-// import { PetDetails } from './pages/PetDetails.jsx';
-// import { PetEdit } from './pages/PetEdit.jsx';
-// import { Survey } from './pages/Survey.jsx';
 import { MisterEmail } from 'pages/MisterEmail.jsx';
 import {MissKeeperApp} from 'pages/MissKeeperApp.jsx'
 
