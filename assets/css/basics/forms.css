@@ -1,8 +1,16 @@
+form {
+    background-color: rgba(17, 131, 207, 0.452);
+    display: inline-block;
+    padding: 5px;
+    margin: 3vw 33.7vw;
+}
+
 input {
     background-color: azure;
-    border:0;
+    border: 0;
     padding: 5px 10px;
     margin: 2px;
+    border-radius: 10em;
 }
 
 input:focus {

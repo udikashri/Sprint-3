@@ -4,7 +4,7 @@ export function NoteList(props){
     return (
         <section className="note-list">
             {props.notes.map((note,idx) => {
-                return <NotePerview note ={note}/> 
+                return <NotePerview note ={note} key={idx}/> 
             })
             }
         </section>

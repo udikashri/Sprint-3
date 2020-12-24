@@ -1,6 +1,6 @@
 export const noteService = {
     query,
-    CreateNote
+    createNote
 }
 
 var gNotes = [{
@@ -36,7 +36,8 @@ function query() {
     return Promise.resolve(gNotes)
 }
 
-function CreateNote(noteTxt) {
+function createNote(noteTxt) {
+    console.log(noteTxt);
     var newNote = {
         type: "NoteText",
         isPinned: true,

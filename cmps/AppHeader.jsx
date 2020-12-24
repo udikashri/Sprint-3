@@ -29,13 +29,13 @@ class _AppHeader extends React.Component {
         return <header className="app-header">
             <nav>
                 <ul>
-                    <li><NavLink activeClassName="my-active" exact to="/">Home</NavLink></li>
-                    <li><NavLink to="/MissKeeperApp">Miss Keeper App</NavLink></li>
-                    <li><NavLink to="/MisterEmail">Mister Email</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
+                    <li className="animate__animated animate__zoomInDown"><NavLink activeClassName="my-active" exact to="/">Home</NavLink></li>
+                    <li className="animate__animated animate__zoomInDown"><NavLink to="/MissKeeperApp">Miss Keeper</NavLink></li>
+                    <li className="animate__animated animate__zoomInDown"><NavLink to="/MisterEmail">Mister Email</NavLink></li>
+                    <li className="animate__animated animate__zoomInDown"><NavLink to="/about">About</NavLink></li>
                 </ul>
                 <div className="center">
-                    <h1>My App</h1>
+                    <h1 className="animate__animated animate__flip">PegaSusApp</h1>
                     <a className="small" onClick={this.goToAbout}>
                         Meet the team
                     </a>

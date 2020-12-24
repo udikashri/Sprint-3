@@ -1,17 +1,20 @@
-
 @import '../../lib/animate.css';
+
 /* Basics */
 
 @import './basics/base.css';
 @import './basics/forms.css';
 
 /* Components: */
+
 @import './cmps/AppHeader.css';
 @import './cmps/PetFilter.css';
 @import './cmps/PetList.css';
 @import './cmps/emailPreview.css';
+@import './MissKeeper/NoteList.css';
+@import './MissKeeper/MissKeeperApp.css';
+@import './MisterEmail/EmailList.css';
 
-.title{
+/* .title{
     background-color: brown;
-}
-
+} */

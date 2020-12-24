@@ -1,17 +1,17 @@
 .app-header {
-    background-color: black;
+    background-color: rgba(14, 37, 250, 0.562);
     color: whitesmoke;
 }
 
 .app-header h1 {
     font-size: 2em;
 }
+
 .app-header nav ul {
     list-style: none;
 }
 
-.app-header nav li{
+.app-header nav li {
     display: inline-block;
     margin: .5em;
 }
-

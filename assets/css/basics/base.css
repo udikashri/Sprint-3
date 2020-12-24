@@ -1,4 +1,8 @@
-html, body, div, header, h1 {
+html,
+body,
+div,
+header,
+h1 {
     margin: 0;
     padding: 0;
 }
@@ -6,12 +10,14 @@ html, body, div, header, h1 {
 body {
     background-color: rgb(62, 161, 194);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("../../img/intro-1591382762.jpg");
 }
 
 a {
     text-decoration: none;
     color: whitesmoke;
 }
+
 a:hover {
     text-decoration: underline;
 }
@@ -28,10 +34,10 @@ nav .my-active {
 footer {
     text-align: center;
     border-top: 1px solid gray;
-    margin-top: 5px;
+    margin-top: 10vh;
 }
 
-.debug *{
+.debug * {
     outline: 1px solid orange;
 }
 
@@ -53,3 +59,12 @@ footer {
     background-color: gray;
 }
 
+
+/* 
+img {
+    width: 10%;
+} */
+
+button {
+    border-radius: 10em;
+}
