@@ -6,7 +6,7 @@ export function EmailList({ emails, openEmail, onSelectEmail, onDelete }) {
     return (
 
         <section className="email-list">
-            <h2>Email list</h2>
+
             
             <div className='emails-contaner'>
                 {emails.map(email => {

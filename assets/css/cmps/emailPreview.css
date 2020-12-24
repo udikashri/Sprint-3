@@ -2,12 +2,10 @@
 
 .email .email-header .read{
     
-    font-weight: lighter;
-    font-size: 1.25rem;
+    font-weight: lighter
 }
 .email .email-header .unread{
     font-weight: bold;
-    font-size: 1.25rem;
 }
 
 .email .select-email{
@@ -15,7 +13,10 @@
 }
 .email .email-header{
     white-space: nowrap;
-    height: 20px;
+    height: 50px;
     overflow: hidden;
     text-overflow: "----"; 
+    font-size: 1.25rem;
+    padding: 10px;
+    padding-left: 30px;
 }

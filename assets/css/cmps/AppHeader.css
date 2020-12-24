@@ -17,7 +17,7 @@
 .app-header nav ul {
     list-style: none;
     display: flex;
-    align-content: center;
+    align-items: center;
     height: 100%;
     align-items: center;
     justify-content: end;
@@ -28,8 +28,17 @@
 }
 
 .app-header nav li {
-   width: 130px;
-   text-align: center
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right:  1px solid;
+
+    height: 100px;
+}
+
+.app-header nav li:first-child{
+    border-left:  1px solid;
 
 }
 
@@ -41,8 +50,6 @@ nav .active {
 nav .my-active {
     color: lightskyblue;
 }
-
-
 
 .center {
     flex-grow: 10;

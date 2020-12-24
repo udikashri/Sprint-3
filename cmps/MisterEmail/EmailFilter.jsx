@@ -22,8 +22,8 @@ export class EmailFilter extends React.Component {
        const booleanFilter = this.props.isRead? 'read':'unread'
         return (
             <section>
-                <input className="input-filter" type="text" name="name"
-                    placeholder="filter"
+                <i className="fas fa-search"></i><input className="input-filter" type="text" name="name"
+                    placeholder="Search Mail"
                     onChange={this.handleChange} />
                 <button onClick={(ev) => {
                     ev.preventDefault(); //stops navigation
