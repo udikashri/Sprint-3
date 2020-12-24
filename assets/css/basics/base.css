@@ -1,4 +1,8 @@
-html, body, div, header, h1 {
+html,
+body,
+div,
+header,
+h1 {
     margin: 0;
     padding: 0;
 }
@@ -12,6 +16,7 @@ a {
     text-decoration: none;
     color: whitesmoke;
 }
+
 a:hover {
     text-decoration: underline;
 }
@@ -31,7 +36,7 @@ footer {
     margin-top: 5px;
 }
 
-.debug *{
+.debug * {
     outline: 1px solid orange;
 }
 
@@ -53,3 +58,12 @@ footer {
     background-color: gray;
 }
 
+
+/* 
+img {
+    width: 10%;
+} */
+
+button {
+    border-radius: 10em;
+}

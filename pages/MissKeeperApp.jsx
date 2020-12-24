@@ -1,4 +1,4 @@
-import {NoteList} from '../cmps/MissKeep/NoteList.jsx'
+import { NoteList } from '../cmps/MissKeep/NoteList.jsx'
 
 import { noteService } from '../services/noteService.js'
 export class MissKeeperApp extends React.Component {
@@ -9,14 +9,13 @@ export class MissKeeperApp extends React.Component {
             name: '',
             power: null
         },
-        newNote : {
-            txt : ''
+        newNote: {
+            txt: ''
         }
     };
 
     componentDidMount() {
         this.loadNotes();
-        // console.log(noteService);
     }
 
     componentWillUnmount() {
@@ -28,65 +27,34 @@ export class MissKeeperApp extends React.Component {
         });
     }
 
-
-    // onRemovePet = (noteId) => {
-    //     notesService.remove(noteId).then(() => {
-    //         this.loadNotes()
-    //     })
-    // }
-
-    // getPetsForDisplay = () => {
-    //     const { filterBy } = this.state;
-    //     const filterRegex = new RegExp(filterBy.name, 'i');
-    //     return this.state.pets.filter(pet => filterRegex.test(pet.name));
-
-    //     // Another way of doing filter
-    //     // const txt = filterBy.name.toLowerCase()
-    //     // return this.state.pets.filter(pet => {
-    //     //     return pet.name.toLowerCase().includes(txt);
-    //     // });
-    // }
-
-    // get petsForDisplay() {
-    //     const { filterBy } = this.state;
-    //     const filterRegex = new RegExp(filterBy.name, 'i');
-    //     return this.state.pets.filter(pet => filterRegex.test(pet.name));
-    // }
-
-    // onSetFilter = (filterBy) => {
-    //     console.log('filterBy:', filterBy);
-    //     this.setState({ filterBy });
-    // }
-
-
-    handleChange = (ev) => {
-        const callback = () => {
-        // console.log(props);
-        // this.props.noteService.CreateNote(this.state.newNote.txt);
-            // 
-        };
-        
-        const newNoteTxt = ({...this.state.newNote.info})
-        newNoteTxt[ev.target.userTxt] = ev.target.value;
-console.log(newNoteTxt);
-        this.setState({newNote:newNotetxt}, callback);
-    };
-
-
+    onAns = (ans) => {
+        const copy = this.state.newNote
+        console.log(ans);
+        copy.txt = ans;
+        console.log(copy);
+        this.setState({ newNote: copy })
+    }
     render() {
 
         return (
             <section className="missKeep-app">
-           <h1>notes</h1>
-           <NoteList notes = {this.state.notes}/>
-           <div>
-
-           <input type="text" name="userTxt"
-                // value=''
-                placeholder="What's in your Mind"
-                autoComplete="off"
-                onChange={this.handleChange} />
-           </div>
+                <h1>notes</h1>
+                <NoteList notes={this.state.notes} />
+                <form>
+                    <label>
+                        Create A Note
+                        <input placeholder={this.state.newNote.txt} onChange={(ev) => {
+                            ev.preventDefault()
+                            console.log(ev.target.value);
+                            this.onAns(ev.target.value)
+                        }} />
+                    </label>
+                    <button onClick={() => {
+                        noteService.createNote(this.state.newNote.txt)
+                        const copy = this.state.newNote.txt
+                        this.setState({ txt: copy })
+                    }}>Add</button>
+                </form>
             </section>
         );
     }
