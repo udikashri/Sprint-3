@@ -19,6 +19,7 @@ export class EmailFilter extends React.Component {
     }
 
     render() {
+       const booleanFilter = this.props.isRead? 'read':'unread'
         return (
             <section>
                 <input className="input-filter" type="text" name="name"
@@ -31,7 +32,7 @@ export class EmailFilter extends React.Component {
                 <button onClick={(ev) => {
                     ev.preventDefault(); //stops navigation
                     this.setIsReadFilter(false);
-                }}>Unread</button>
+                }}>Unreas</button>
 
 
 

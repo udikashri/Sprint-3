@@ -8,7 +8,7 @@ export const emailService = {
     saveEmail
 }
 function saveEmail(newEmail) {
-
+console.log(newEmail);
     const newEmailItem = {
         subject: newEmail.subject,
         body: newEmail.body, isRead: false,
@@ -17,6 +17,7 @@ function saveEmail(newEmail) {
     }
         
     gEmails.unshift(newEmailItem)
+    _saveEmailsToStorage()
 
 }
 function deleteEmail(emailId) {
@@ -24,7 +25,7 @@ function deleteEmail(emailId) {
     gEmails = gEmails.filter(email => {
         return email.id !== emailId
     })
-    _savePetsToStorage()
+    _saveEmailsToStorage()
     return gEmails
 }
 
@@ -41,11 +42,11 @@ function _createEmails() {
     if (!gEmails || !gEmails.length) {
    // Nothing in localStorage, use demo data
     gEmails = _getDemoEmails()
-    _savePetsToStorage();
+    _saveEmailsToStorage();
      }
 }
 
-function _savePetsToStorage() {
+function _saveEmailsToStorage() {
     storageService.save(KEY, gEmails)
 }
 

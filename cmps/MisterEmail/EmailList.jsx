@@ -13,7 +13,7 @@ export function EmailList({ emails, openEmail, onSelectEmail, onDelete }) {
                     // { selected && <BookDetails book={selected} switchBook={this.onSwitchBook} /> }
 
                     return <div className='email' key={email.id}>
-                        <EmailPreview email={email} onSelectEmail={onSelectEmail} />
+                        <EmailPreview email={email} onSelectEmail={onSelectEmail} isSelectEmail={email === openEmail}/>
                         {email === openEmail && <EmailDetails email={openEmail} onDelete={onDelete}/>}
                     </div>
                 })}

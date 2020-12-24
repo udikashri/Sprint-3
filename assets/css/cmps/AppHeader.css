@@ -7,11 +7,45 @@
     font-size: 2em;
 }
 
+.app-header nav {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .app-header nav ul {
     list-style: none;
+    display: flex;
+    align-content: center;
+    height: 100%;
+    align-items: center;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+    margin-right: 10%;
+    flex-grow: 9
 }
 
 .app-header nav li {
-    display: inline-block;
-    margin: .5em;
+   width: 130px;
+   text-align: center
+
+}
+
+nav .active {
+    color: rgb(187, 154, 223);
+    text-decoration: underline;
+}
+
+nav .my-active {
+    color: lightskyblue;
+}
+
+
+
+.center {
+    flex-grow: 10;
+    /* text-align: center; */
+    margin-left: 10%;
 }

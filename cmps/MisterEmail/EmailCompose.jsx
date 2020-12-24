@@ -22,7 +22,7 @@ export class EmailCompose extends React.Component {
         const value = ev.target.value
         if (ev.target.type === 'number' && (value > 5 || value < 0)) return
         const emailCopy = { ...this.state.email };
-        emailCopy[ev.target.name] = value; 
+        emailCopy[ev.target.name] = value;
         this.setState({
             email: emailCopy
         });
@@ -31,16 +31,19 @@ export class EmailCompose extends React.Component {
 
     render() {
         return (
-            <form  onSubmit={this.onSaveEmail}>
-
-                <input placeholder="Name" type="text" name="subject"
+            <form className='input-email' onSubmit={this.onSaveEmail}>
+                <div className='form-header'>new mail <i onClick={() => { this.props.onNewEmail() }} className="close fas fa-times"></i></div>
+                <div><input placeholder="Name" type="text" name="subject"
                     value={this.state.email.subject} onChange={this.onInputChange} />
-
-
-                <input value={this.state.email.date} type="date" id="date" name="date"
-                    onChange={this.onInputChange} />
-                <textarea className='input-text' rows="4" cols="50" name="body" form="usrform"
-                    onChange={this.onInputChange} />
+                </div>
+                <div>
+                    <input value={this.state.email.date} type="date" id="date" name="date"
+                        onChange={this.onInputChange} />
+                </div>
+                <div>
+                    <textarea className='input-text' rows="4" cols="50" name="body" form="usrform"
+                        onChange={this.onInputChange} />
+                </div>
 
                 <button type="submit" className="email-form-button">compose</button>
             </form>)

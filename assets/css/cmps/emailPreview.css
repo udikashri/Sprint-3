@@ -1,7 +1,21 @@
 
 
-.read{
+.email .email-header .read{
     
-    color: chartreuse;
+    font-weight: lighter;
+    font-size: 1.25rem;
+}
+.email .email-header .unread{
+    font-weight: bold;
+    font-size: 1.25rem;
 }
 
+.email .select-email{
+    background-color: crimson;
+}
+.email .email-header{
+    white-space: nowrap;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: "----"; 
+}

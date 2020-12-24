@@ -5,13 +5,11 @@ export function EmailDetails({ email, onDelete }) {
 
     return (
    
-        <article>
-            <div>
-            {email.subject}  
-            </div>
+        <article  className={`details`}>
+            <h4>{email.subject}  </h4>
             {email.body}
             <div  onClick={() => { onDelete(email.id) }}>
-                remove</div>
+                <i className="fas fa-trash trash"></i></div>
         </article>
   );
 }
