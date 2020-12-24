@@ -1,8 +1,26 @@
-.email-list {
-    background-color: rgba(211, 211, 211, 0.349);
-}
-
-.email-list>* {
+    .email-list {
+        background-color: rgba(211, 211, 211, 0.349);
+        grid-area: 2/2/5/3;
+    }
+    /* .email-list>* {
     background-color: rgba(65, 60, 60, 0.349);
     border: 1.8px solid lightcyan;
-}
+} */
+    /* .title {
+        background-color: rgba(65, 60, 60, 0.349);
+        border: 1.8px solid lightcyan;
+        padding: 3vh;
+        margin: 2vh;
+    } */
+    
+    .email article {
+        background-color: rgba(65, 60, 60, 0.349);
+        border: 1.8px solid lightcyan;
+        margin-inline-start: 22vw;
+        padding: 3vh;
+        margin: 2vh;
+    }
+    
+    .title.read {
+        cursor: pointer;
+    }

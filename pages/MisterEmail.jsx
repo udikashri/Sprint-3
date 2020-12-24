@@ -21,8 +21,8 @@ export class MisterEmail extends React.Component {
         const {color} = this.state.headerStyle;
         return (
             <section>
-                <h2>
-                    mister email </h2>
+                {/* <h2> */}
+                    {/* mister email </h2> */}
                     <EmailApp/>
             </section>
         )

@@ -79,14 +79,16 @@ export class EmailApp extends React.Component {
 
         const { emails } = this.state
         return (
-            <section>
+            <section className={'email-app'}>
 
                 <h1>email app</h1>
                 <EmailStatus emails={emails} />
+                <div className="email-filter">
                 <EmailFilter setFilter={this.onSetFilter} />
+                </div>
+                <EmailCompose renderEmails={this.loadEmails}/>
                 <EmailList emails={this.getEmailForDisplay()} openEmail={this.state.selected}
                     onSelectEmail={this.onSelectEmail} onDelete={this.onDelete} />
-                    <EmailCompose renderEmails={this.loadEmails}/>
             </section>
         )
     }

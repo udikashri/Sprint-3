@@ -39,7 +39,7 @@ export class MissKeeperApp extends React.Component {
         return (
             <section className="missKeep-app">
                 {/* <h1>notes</h1> */}
-                <form>
+                <form className="miss-keeper-form">
                     <label>
                         Create A Note
                         <input placeholder={this.state.newNote.txt} onChange={(ev) => {

@@ -1,0 +1,24 @@
+section.email-app {
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+    margin-top: 5vw;
+    /* background-color: rgba(38, 67, 100, 0.301); */
+}
+
+.email-app form {
+    grid-area: 3/1/4/2;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 2.9vh;
+}
+
+
+/* .email-app section {
+    grid-area: 1/2/2/3;
+} */
+
+.email-filter {
+    grid-area: 1/2/2/3;
+    margin-inline-start: 25vw;
+    margin-bottom: 3vh;
+}

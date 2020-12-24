@@ -42,7 +42,7 @@ export class EmailCompose extends React.Component {
                 <textarea className='input-text' rows="4" cols="50" name="body" form="usrform"
                     onChange={this.onInputChange} />
 
-                <button type="submit">compose</button>
+                <button type="submit" className="email-form-button">compose</button>
             </form>)
     }
 }

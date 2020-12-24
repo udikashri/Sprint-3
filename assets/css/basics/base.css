@@ -8,9 +8,11 @@ h1 {
 }
 
 body {
-    background-color: rgb(62, 161, 194);
+    /* background-color: rgb(62, 161, 194); */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url("../../img/intro-1591382762.jpg");
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -29,6 +31,10 @@ nav .active {
 
 nav .my-active {
     color: lightskyblue;
+}
+
+nav ul {
+    margin-top: 0;
 }
 
 footer {

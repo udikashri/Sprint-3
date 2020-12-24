@@ -2,18 +2,24 @@
 
 /* Basics */
 
-@import './basics/base.css';
-@import './basics/forms.css';
+@import 'basics/base.css';
+@import 'basics/forms.css';
 
 /* Components: */
 
-@import './cmps/AppHeader.css';
-@import './cmps/PetFilter.css';
-@import './cmps/PetList.css';
-@import './cmps/emailPreview.css';
-@import './MissKeeper/NoteList.css';
-@import './MissKeeper/MissKeeperApp.css';
-@import './MisterEmail/EmailList.css';
+@import 'cmps/AppHeader.css';
+
+/* @import './cmps/PetFilter.css'; */
+
+
+/* @import './cmps/PetList.css'; */
+
+@import 'cmps/emailPreview.css';
+@import 'MissKeeper/NoteList.css';
+@import 'MissKeeper/MissKeeperApp.css';
+@import 'MisterEmail/EmailList.css';
+@import 'MisterEmail/EmailApp.css';
+@import 'basics/home.css';
 
 /* .title{
     background-color: brown;

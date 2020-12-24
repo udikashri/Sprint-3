@@ -1,0 +1,10 @@
+.home-container {
+    /* display: grid;
+    grid-template-columns: repeat(2, 50vw); */
+    background-color: rgba(5, 11, 15, 0.322);
+}
+
+
+/* .home-container .home-mister-email {
+    grid-area: 1/1/5/2;
+} */
