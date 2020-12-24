@@ -1,0 +1,8 @@
+.email-list {
+    background-color: rgba(211, 211, 211, 0.349);
+}
+
+.email-list>* {
+    background-color: rgba(65, 60, 60, 0.349);
+    border: 1.8px solid lightcyan;
+}

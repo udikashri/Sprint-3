@@ -7,7 +7,7 @@ export function NotePerview(props) {
 
     switch (props.note.type) {
         case 'NoteText':
-            return <NoteText {...props} />
+            return <div><NoteText {...props} /><div className="trash-icon"><img src="assets/img/trash.png" alt=""/></div></div> 
         case 'NoteImg':
             return <NoteImg {...props} />
         case 'NoteTodos':

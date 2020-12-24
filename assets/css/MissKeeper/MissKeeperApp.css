@@ -1,0 +1,14 @@
+.icons {
+    display: inline;
+    padding: 2px;
+    margin: 2px;
+}
+
+.icons>img {
+    /* padding: 2px; */
+    margin: 2px;
+}
+
+.icons>img:hover {
+    cursor: pointer;
+}

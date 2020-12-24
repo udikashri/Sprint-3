@@ -10,6 +10,7 @@ h1 {
 body {
     background-color: rgb(62, 161, 194);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("../../img/intro-1591382762.jpg");
 }
 
 a {
@@ -33,7 +34,7 @@ nav .my-active {
 footer {
     text-align: center;
     border-top: 1px solid gray;
-    margin-top: 5px;
+    margin-top: 10vh;
 }
 
 .debug * {

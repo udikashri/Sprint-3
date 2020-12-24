@@ -15,10 +15,17 @@
     min-height: 15vh;
     /* height: 30vh; */
     text-align: center;
-    text-transform: capitalize
+    text-transform: capitalize;
+    justify-items: center;
 }
 
 .note-list>img {
     width: 20vw;
     height: 30vh;
+}
+
+.trash-icon>img {
+    /* display: flex;
+    align-self: flex-end; */
+    float: inline-end;
 }

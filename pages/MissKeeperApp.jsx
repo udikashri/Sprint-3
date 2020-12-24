@@ -38,8 +38,7 @@ export class MissKeeperApp extends React.Component {
 
         return (
             <section className="missKeep-app">
-                <h1>notes</h1>
-                <NoteList notes={this.state.notes} />
+                {/* <h1>notes</h1> */}
                 <form>
                     <label>
                         Create A Note
@@ -48,6 +47,14 @@ export class MissKeeperApp extends React.Component {
                             console.log(ev.target.value);
                             this.onAns(ev.target.value)
                         }} />
+                        <div className="icons">
+                            <img src="assets/img/a.png" />
+                            <img src="assets/img/picture.png" />
+                            <img src="assets/img/youtube.png" />
+                            <img src="assets/img/volume.png" />
+                            {/* <button></button>
+                        <button></button> */}
+                        </div>
                     </label>
                     <button onClick={() => {
                         noteService.createNote(this.state.newNote.txt)
@@ -55,6 +62,7 @@ export class MissKeeperApp extends React.Component {
                         this.setState({ txt: copy })
                     }}>Add</button>
                 </form>
+                <NoteList notes={this.state.notes} />
             </section>
         );
     }

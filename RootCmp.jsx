@@ -28,7 +28,7 @@ export class RootCmp extends React.Component {
                         {/* <Route path="/survey" component={Survey} /> */}
                         <Route path="/" component={Home} />
                     </Switch>
-                    <footer className="animate__animated animate__jello">coffeerights 2020</footer>
+                    <footer className="fotter animate__animated animate__tada">coffeerights 2020</footer>
                 </section>
             </Router>
         );
