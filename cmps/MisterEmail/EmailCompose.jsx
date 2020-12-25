@@ -6,7 +6,8 @@ export class EmailCompose extends React.Component {
     state = {
         email: {
             subject: 'subject',
-            date: `${new Date().getFullYear()}-${(new Date().getMonth() + 1)}-${new Date().getDate()} `,
+            date: `${(new Date().getMonth() + 1)}-${new Date().getDate()}`,
+            time:`${new Date().getHours()}:${new Date().getMinutes()}`,
             body: ''
         },
         bodyVisibility:'block'
@@ -40,7 +41,11 @@ export class EmailCompose extends React.Component {
     render() {
         const color ='pink'
         return (
-            <form className='input-email' onSubmit={this.onSaveEmail}>
+            <form className='input-email' onSubmit={(ev) => {
+                // ev.preventDefault(); //stops navigation
+                this.onSaveEmail(ev);
+                this.props.onNewEmail()
+            }}>
                 <div className='form-header'>new mail
                 <i onClick={() => { this.onMinimize()}} className="minimize fas fa-window-minimize"></i>
                 <i onClick={() => { this.props.onNewEmail() }} className="close fas fa-times"></i></div>

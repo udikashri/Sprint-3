@@ -1,22 +1,44 @@
 
 
-.email .email-header .read{
+.email .email-header.read{
     
-    font-weight: lighter
+    font-weight: lighter;
+    background-color: #f5f7f7;;
 }
-.email .email-header .unread{
+
+.email .email-header.unread{
     font-weight: bold;
+
 }
 
 .email .select-email{
     background-color: crimson;
 }
+
+.email .email-header .title{
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
 .email .email-header{
     white-space: nowrap;
     height: 50px;
+    width: 74vw;
     overflow: hidden;
     text-overflow: "----"; 
     font-size: 1.25rem;
     padding: 10px;
-    padding-left: 30px;
+    padding-left: 20px;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    border-bottom: 2px solid #e3e8ea;
+    justify-content: space-between;
+}
+
+.email .email-header .sent-at{
+padding-right: 30px;
 }

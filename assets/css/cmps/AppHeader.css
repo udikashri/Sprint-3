@@ -1,5 +1,5 @@
 .app-header {
-    background-color: rgba(14, 37, 250, 0.562);
+    background-color: rgba(255, 145, 0, 0.555);
     color: whitesmoke;
 }
 
@@ -33,7 +33,7 @@
     align-items: center;
     justify-content: center;
     border-right:  1px solid;
-
+font-size: larger;
     height: 100px;
 }
 
@@ -48,7 +48,7 @@ nav .active {
 }
 
 nav .my-active {
-    color: lightskyblue;
+    color: lightsalmon;
 }
 
 .center {
