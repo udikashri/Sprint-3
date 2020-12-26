@@ -34,7 +34,7 @@ export class NotePreviewFotter extends React.Component {
                     case 'tack':
                         
                         // console.log(this.props.note.note.info.id)
-                        if (elId && (elIcons[i].name + 'C' === iconColor)) {
+                        if (elId && this.state.toggleIcons) {
                             const copy = this.state
                             copy.toggleIcons = false
                             this.setState({toggleIcons:copy})
@@ -46,7 +46,7 @@ export class NotePreviewFotter extends React.Component {
                     }
                         return
                         case 'chec':
-                            if (!elCard && elId && (elIcons[i].name  === iconColor)) {
+                            if (elId && this.state.toggleIcons) {
                                 const copy1 = this.state
                                 copy1.toggleIcons = false
                                 this.setState({toggleIcons1:copy1})
