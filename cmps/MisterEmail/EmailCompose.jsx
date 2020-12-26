@@ -6,9 +6,11 @@ export class EmailCompose extends React.Component {
     state = {
         email: {
             subject: 'subject',
-            date: `${new Date().getFullYear()}-${(new Date().getMonth() + 1)}-${new Date().getDate()} `,
+            date: `${(new Date().getMonth() + 1)}-${new Date().getDate()}`,
+            time:`${new Date().getHours()}:${new Date().getMinutes()}`,
             body: ''
-        }
+        },
+        bodyVisibility:'block'
     };
 
     onSaveEmail = (ev) => {//on submit
@@ -22,27 +24,46 @@ export class EmailCompose extends React.Component {
         const value = ev.target.value
         if (ev.target.type === 'number' && (value > 5 || value < 0)) return
         const emailCopy = { ...this.state.email };
-        emailCopy[ev.target.name] = value; 
+        emailCopy[ev.target.name] = value;
         this.setState({
             email: emailCopy
         });
 
     };
+    onMinimize = ()=>{
+        var {bodyVisibility} = this.state
+        console.log(bodyVisibility);
+        if(bodyVisibility==='none') bodyVisibility='block'
+        else bodyVisibility='none'
+        this.setState({bodyVisibility:bodyVisibility})
+    }
 
     render() {
+        const color ='pink'
         return (
-            <form  onSubmit={this.onSaveEmail}>
+            <form className='input-email' onSubmit={(ev) => {
+                // ev.preventDefault(); //stops navigation
+                this.onSaveEmail(ev);
+                this.props.onNewEmail()
+            }}>
+                <div className='form-header'>new mail
+                <i onClick={() => { this.onMinimize()}} className="minimize fas fa-window-minimize"></i>
+                <i onClick={() => { this.props.onNewEmail() }} className="close fas fa-times"></i></div>
+                <div style={{display: this.state.bodyVisibility}}  className='form-body'>
+                    <div><input placeholder="Name" type="text" name="subject"
+                        value={this.state.email.subject} onChange={this.onInputChange} />
+                    </div>
+                    <div>
+                        <input value={this.state.email.date} type="date" id="date" name="date"
+                            onChange={this.onInputChange} />
+                    </div>
+                    <div>
+                        <textarea className='input-text' rows="4" cols="50" name="body" form="usrform"
+                            onChange={this.onInputChange} />
+                    </div>
 
-                <input placeholder="Name" type="text" name="subject"
-                    value={this.state.email.subject} onChange={this.onInputChange} />
-
-
-                <input value={this.state.email.date} type="date" id="date" name="date"
-                    onChange={this.onInputChange} />
-                <textarea className='input-text' rows="4" cols="50" name="body" form="usrform"
-                    onChange={this.onInputChange} />
-
-                <button type="submit" className="email-form-button">compose</button>
+                    <button type="submit" className="email-form-button">Send <i className="fas fa-caret-down"></i></button>
+                </div>
             </form>)
     }
 }

@@ -9,7 +9,7 @@ const { NavLink, withRouter } = ReactRouterDOM;
 class _AppHeader extends React.Component {
 
     state = {
-        msg : ''
+        msg: ''
     }
 
     // componentDidMount() {
@@ -22,24 +22,23 @@ class _AppHeader extends React.Component {
     // }
     goToAbout = () => {
         this.props.history.push('/about');
-    }        
+    }
 
     render() {
-        const {msg} = this.state; 
+        const { msg } = this.state;
         return <header className="app-header">
             <nav>
+                <div className="center">
+                    <h1 className="animate__animated animate__flip">PegaSusApp</h1>
+
+                </div>
                 <ul>
                     <li className="animate__animated animate__zoomInDown"><NavLink activeClassName="my-active" exact to="/">Home</NavLink></li>
                     <li className="animate__animated animate__zoomInDown"><NavLink to="/MissKeeperApp">Miss Keeper</NavLink></li>
                     <li className="animate__animated animate__zoomInDown"><NavLink to="/MisterEmail">Mister Email</NavLink></li>
                     <li className="animate__animated animate__zoomInDown"><NavLink to="/about">About</NavLink></li>
                 </ul>
-                <div className="center">
-                    <h1 className="animate__animated animate__flip">PegaSusApp</h1>
-                    <a className="small" onClick={this.goToAbout}>
-                        Meet the team
-                    </a>
-                </div>
+
             </nav>
             {msg && <div className="user-msg">
                 {msg}

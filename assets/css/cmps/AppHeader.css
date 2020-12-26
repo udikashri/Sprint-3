@@ -1,5 +1,5 @@
 .app-header {
-    background-color: rgba(14, 37, 250, 0.562);
+    background-color: rgba(255, 145, 0, 0.555);
     color: whitesmoke;
 }
 
@@ -7,11 +7,51 @@
     font-size: 2em;
 }
 
+.app-header nav {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .app-header nav ul {
     list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    align-items: center;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+    margin-right: 10%;
+    flex-grow: 9
 }
 
 .app-header nav li {
-    display: inline-block;
-    margin: .5em;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid;
+    font-size: larger;
+    height: 100px;
+}
+
+.app-header nav li:first-child {
+    border-left: 1px solid;
+}
+
+nav .active {
+    color: rgb(187, 154, 223);
+    text-decoration: underline;
+}
+
+nav .my-active {
+    color: lightsalmon;
+}
+
+.center {
+    flex-grow: 10;
+    /* text-align: center; */
+    margin-left: 10%;
 }

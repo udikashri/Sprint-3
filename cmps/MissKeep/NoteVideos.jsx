@@ -8,10 +8,10 @@ export function NoteVideos(props) {
         <h1>{props.note.info.title}</h1>
         {/* <video src="https://www.youtube.com/watch?v=VvU27gvAK40"></video> */}
         <iframe width="200" height="170"
-            src={`https://www.youtube.com/embed/${props.note.info.url}?autoplay=1`}>
+            src={props.note.info.url}>
         </iframe>
         {/* <video src={video} width="200" height="170" controls="controls" /> */}
         <br />
-        <NotePreviewFotter />
+        <NotePreviewFotter note={props.note} />
     </section>
 }

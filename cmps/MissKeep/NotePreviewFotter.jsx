@@ -4,6 +4,12 @@ export class NotePreviewFotter extends React.Component {
         toggleIcons: false
     }
 
+    componentDidMount() {
+        console.log(this.props)
+      
+    }
+
+
     handleFotterClick = (ev) => {
         var elIcons = ev.currentTarget.children
         const noteType = ev.target.name
@@ -15,6 +21,26 @@ export class NotePreviewFotter extends React.Component {
                 const copy = this.state
                 copy.typeSelected = noteType
                 this.setState({ copy })
+                const stateX = this.props
+                console.log(stateX);
+                this.setState({note:stateX})
+                switch (noteType) {
+                    case 'tack':
+                        console.log('hello');
+                        this.props.note.title = 'yayy';
+                        return
+                    case 'chec':
+                        return
+                    case 'pain':
+                        return
+                    case 'edit':
+                        return
+                    case 'copy':
+                        return
+                    case 'tras':
+                        return
+
+                }
             }
         }
     }

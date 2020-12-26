@@ -1,16 +1,19 @@
-import {NotePreviewFotter} from 'NotePreviewFotter.jsx'
+import { NotePreviewFotter } from 'NotePreviewFotter.jsx'
 
 export function NoteTodos(props) {
-    var x = props.note.info.todos.map((todo, idx) => {
-        // console.log(todo.txt);
-        return todo.txt
+    props.note.info.todos.map((txt) => {
+        console.log(txt)
     })
-    // console.log(x);
-    // console.log('props', props);
+    console.log(props.note.info.todos)
     return <div>
         <h1>{props.note.info.label}</h1>
-        <br/>
-        <NotePreviewFotter/>
+        <h2>{props.note.info.todos.map((txt,idx) => {
+            console.log(txt[idx]);
+            return txt.txt
+
+        })}</h2>
+        <br />
+        <NotePreviewFotter note={props} />
     </div>
 
 }

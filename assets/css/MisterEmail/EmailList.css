@@ -18,9 +18,77 @@
         border: 1.8px solid lightcyan;
         margin-inline-start: 22vw;
         padding: 3vh;
-        margin: 2vh;
+        margin: 4vh 2vh 0;
+        width: 60vw;
     }
     
     .title.read {
         cursor: pointer;
+    }
+    
+    .emails-contane {
+        background-color: yellowgreen;
+    }
+    
+    .email .details,
+    .details {
+        width: 74vw;
+        margin: 0%;
+        padding: 0px 20px 40px 20px;
+        position: relative;
+        overflow: hidden;
+        text-overflow: clip;
+        background-color: white;
+    }
+    
+    .email .details h4,
+    .details h4 {
+        margin: 0 2px 5px;
+        font-size: 1.5rem;
+        padding: 10px 0;
+    }
+    
+    .email .details p,
+    .details p {
+        padding: 0px 20px;
+        white-space: pre-line;
+        text-indent: 0;
+        margin: 0;
+    }
+    
+    .email .details .expand,
+    .details .expand {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px 60px;
+        font-size: 1.5rem;
+        background-color: #f5f7f7;
+        color: #767676;
+        padding: 10px;
+        border-radius: 47%;
+        text-align: center;
+    }
+    
+    .email .details .trash,
+    .details .trash {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        font-size: 1.5rem;
+        background-color: #f5f7f7;
+        color: #767676;
+        padding: 10px;
+        border-radius: 47%;
+        text-align: center;
+    }
+    
+    .email .details .trash:hover,
+    .email .details .expand:hover,
+    .details .trash:hover,
+    .details .expand:hover {
+        background-color: #e8e8e8;
+        cursor: pointer;
+        color: black;
     }

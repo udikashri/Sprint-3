@@ -4,6 +4,6 @@ return <section>
     <h1>{props.note.info.title}</h1>
     <img src={props.note.info.url}/>
     <br/>
-    <NotePreviewFotter/>
+    <NotePreviewFotter note={props.note}/>
     </section> 
 }

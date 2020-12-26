@@ -39,13 +39,12 @@ function createNote(noteTxt, type) {
             gNotes.push(newNote)
             return _saveNotesToStorage()
         case 'NoteVideos':
-            // var url = noteTxt.split('')
-            // console.log(findIndex('=', url));
-
+            var url = noteTxt.replace('watch', 'embed')
+            console.log(url);
             var newNote = {
                 type: type,
                 info: {
-                    url: `${noteTxt.substring(32)}`,
+                    url: `${url}`,
                     title: ''
                 },
                 style: {
