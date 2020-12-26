@@ -144,7 +144,7 @@ function _getDemoNotes() {
             info: {
                 id: utilService.makeId(),
                 sentAt: Date.now(),
-                url: "http://clips.vorwaerts-gmbh.de/VfE_html5.mp4",
+                url: "https://www.youtube.com/embed?v=9qQU99soP7I&list=RDNo1njdnllno&index=8",
                 title: "I'm Video !!!"
             },
             style: {
@@ -156,7 +156,7 @@ function _getDemoNotes() {
             info: {
                 id: utilService.makeId(),
                 sentAt: Date.now(),
-                url: "http://clips.vorwaerts-gmbh.de/VfE_html5.mp4",
+                url: "https://www.youtube.com/watch?v=kB0_vTznm_8&list=RDNo1njdnllno&index=3",
                 title: "I'm Audio !!!"
             },
             style: {
