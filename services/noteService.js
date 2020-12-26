@@ -156,7 +156,7 @@ function _getDemoNotes() {
             info: {
                 id: utilService.makeId(),
                 sentAt: Date.now(),
-                url: "https://www.youtube.com/watch?v=kB0_vTznm_8&list=RDNo1njdnllno&index=3",
+                url: "http://clips.vorwaerts-gmbh.de/VfE_html5.mp4",
                 title: "I'm Audio !!!"
             },
             style: {

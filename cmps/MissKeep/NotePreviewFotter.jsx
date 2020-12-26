@@ -6,6 +6,7 @@ export class NotePreviewFotter extends React.Component {
 
     componentDidMount() {
         console.log(this.props)
+        // document.querySelector('.7DYSTW').style.order = -1
 
     }
 
@@ -31,8 +32,9 @@ export class NotePreviewFotter extends React.Component {
                 // console.log(elId);
                 switch (noteType) {
                     case 'tack':
+                        
                         // console.log(this.props.note.note.info.id)
-                        if (!elCard && elId && (elIcons[i].name + 'C' === iconColor)) {
+                        if (elId && (elIcons[i].name + 'C' === iconColor)) {
                             document.querySelector(`.${elId}`).style.order = null
                         } else { document.querySelector(`.${elId}`).style.order = -1 }
                         return
