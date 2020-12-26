@@ -19,13 +19,17 @@
     justify-items: center;
 }
 
-.note-list>img {
-    width: 20vw;
-    height: 30vh;
+.note-list>section>img {
+    width: 12em;
+    height: 12em;
 }
 
 .trash-icon>img {
     /* display: flex;
     align-self: flex-end; */
     float: inline-end;
+}
+
+.ping {
+    order: -1
 }

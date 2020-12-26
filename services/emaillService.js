@@ -7,18 +7,21 @@ export const emailService = {
     deleteEmail,
     saveEmail
 }
+
 function saveEmail(newEmail) {
 
     const newEmailItem = {
         subject: newEmail.subject,
-        body: newEmail.body, isRead: false,
+        body: newEmail.body,
+        isRead: false,
         sentAt: 1551133930594,
         id: utilService.makeId()
     }
-        
+
     gEmails.unshift(newEmailItem)
 
 }
+
 function deleteEmail(emailId) {
 
     gEmails = gEmails.filter(email => {
@@ -36,13 +39,13 @@ var gEmails;
 _createEmails();
 
 function _createEmails() {
-   // Try loading from localStorage
+    // Try loading from localStorage
     gEmails = storageService.load(KEY);
     if (!gEmails || !gEmails.length) {
-   // Nothing in localStorage, use demo data
-    gEmails = _getDemoEmails()
-    _savePetsToStorage();
-     }
+        // Nothing in localStorage, use demo data
+        gEmails = _getDemoEmails()
+        _savePetsToStorage();
+    }
 }
 
 function _savePetsToStorage() {

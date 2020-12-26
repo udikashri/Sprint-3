@@ -12,3 +12,15 @@
 .icons>img:hover {
     cursor: pointer;
 }
+
+.icons.icon-text {
+    margin-top: 2vh;
+}
+
+.miss-keeper-form {
+    margin: 3vw 32vw;
+}
+
+.section-filter {
+    margin-inline-start: 39.7vw;
+}

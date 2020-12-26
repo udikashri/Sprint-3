@@ -1,4 +1,9 @@
+import {NotePreviewFotter} from 'NotePreviewFotter.jsx'
 export function NoteImg(props){
-console.log(props);
-return <img src={props.note.info.url}/>
+return <section>
+    <h1>{props.note.info.title}</h1>
+    <img src={props.note.info.url}/>
+    <br/>
+    <NotePreviewFotter/>
+    </section> 
 }

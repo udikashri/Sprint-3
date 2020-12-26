@@ -2,7 +2,7 @@ form {
     background-color: rgba(17, 131, 207, 0.452);
     display: inline-block;
     padding: 5px;
-    margin: 3vw 33.7vw;
+    max-width: 500px;
 }
 
 input {
@@ -25,4 +25,8 @@ button {
 
 button:hover {
     color: lightseagreen;
+}
+
+.form-button {
+    display: none;
 }
