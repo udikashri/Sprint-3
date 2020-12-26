@@ -35,27 +35,28 @@ export class NotePreviewFotter extends React.Component {
                         
                         // console.log(this.props.note.note.info.id)
                         if (elId && this.state.toggleIcons) {
-                            const copy = this.state
-                            copy.toggleIcons = false
-                            this.setState({toggleIcons:copy})
+                            const {toggleIcons} = this.state
+                            console.log(this.state);
+                            // copy1.toggleIcons = false
+                            this.setState({toggleIcons:false})
                             document.querySelector(`.${elId}`).style.order = -1 
                         } else { 
                             document.querySelector(`.${elId}`).style.order = null
-                        const copy = this.state
-                            copy.toggleIcons = true
-                            this.setState({toggleIcons:copy})
+                        const {toggleIcons} = this.state
+                            // copy1.toggleIcons = true
+                            this.setState({toggleIcons:true})
                     }
                         return
                         case 'chec':
                             if (elId && this.state.toggleIcons) {
-                                const copy1 = this.state
-                                copy1.toggleIcons = false
-                                this.setState({toggleIcons1:copy1})
+                                const copy2 = this.state
+                                copy2.toggleIcons = false
+                                this.setState({toggleIcons1:copy2})
                                 document.querySelector(`.${elId}`).style.border = 3 + 'px solid' 
                             } else {
-                                const copy1 = this.state
-                                copy1.toggleIcons = true
-                                this.setState({toggleIcons1:copy1})
+                                const copy2 = this.state
+                                copy2.toggleIcons = true
+                                this.setState({toggleIcons1:copy2})
                                 elCard = document.querySelector(`.${elId}`).style.border = null
                         }
                         return
