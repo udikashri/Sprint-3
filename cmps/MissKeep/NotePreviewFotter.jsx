@@ -20,7 +20,7 @@ export class NotePreviewFotter extends React.Component {
         for (var i = 0; i < elIcons.length; i++) {
             const iconColor = elIcons[i].src.substring(33, 38)
             if (elIcons[i].name === noteType) {
-                (elIcons[i].name + 'C' === iconColor) ? elIcons[i].src = `assets/img/${elIcons[i].name.substring(0, elIcons[i].name.length)}.png` : elIcons[i].src = `assets/img/${elIcons[i].name}C.png`
+                (!this.state.toggleIcons) ? elIcons[i].src = `assets/img/${elIcons[i].name.substring(0, elIcons[i].name.length)}.png` : elIcons[i].src = `assets/img/${elIcons[i].name}C.png`
                 const copy = this.state
                 copy.typeSelected = noteType
                 this.setState({ copy })
