@@ -35,16 +35,23 @@ export class NotePreviewFotter extends React.Component {
                         
                         // console.log(this.props.note.note.info.id)
                         if (elId && (elIcons[i].name + 'C' === iconColor)) {
+                            console.log((elIcons[i].name + 'C' === iconColor))
                             document.querySelector(`.${elId}`).style.order = null
-                        } else { document.querySelector(`.${elId}`).style.order = -1 }
+                        } else { document.querySelector(`.${elId}`).style.order = -1 
+                        console.log((elIcons[i].name + 'C' === iconColor))
+                    }
                         return
                         case 'chec':
                             if (!elCard && elId && (elIcons[i].name + 'C' === iconColor)) {
                             // console.log('helllllo');
+                            console.log((elIcons[i].name + 'C' === iconColor))
                             console.log(elCard);
                             elCard = document.querySelector(`.${elId}`).style.border = null
                             console.log(elCard);
-                        } else {console.log('helllllo'); document.querySelector(`.${elId}`).style.border = 3 + 'px solid' }
+                        } else {
+                            console.log((elIcons[i].name + 'C' === iconColor))
+
+                            console.log('helllllo'); document.querySelector(`.${elId}`).style.border = 3 + 'px solid' }
                         return
                     //     case 'pain':
                     //         return
