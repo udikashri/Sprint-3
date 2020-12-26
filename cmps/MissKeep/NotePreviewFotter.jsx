@@ -1,7 +1,7 @@
 export class NotePreviewFotter extends React.Component {
 
     state = {
-        toggleIcons: false
+        toggleIcons: true
     }
 
     componentDidMount() {
