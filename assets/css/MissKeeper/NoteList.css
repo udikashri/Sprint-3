@@ -4,9 +4,9 @@
     justify-content: center;
 }
 
-.note-list>* {
+.note-list>section>* {
     /* display: inline-block; */
-    margin: 5px auto;
+    margin: 5px 3vw;
     border: 1.8px solid lightcyan;
     border-radius: 10px;
     padding: 5px;
@@ -19,7 +19,7 @@
     justify-items: center;
 }
 
-.note-list>section>img {
+.note-list>section>section>img {
     width: 12em;
     height: 12em;
 }

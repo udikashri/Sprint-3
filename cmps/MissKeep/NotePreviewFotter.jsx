@@ -6,11 +6,13 @@ export class NotePreviewFotter extends React.Component {
 
     componentDidMount() {
         console.log(this.props)
-      
+
     }
 
 
-    handleFotterClick = (ev) => {
+    handleFotterClick = (ev, el) => {
+        // console.log(el.props.note.note.info.id);
+        console.log(this.props);
         var elIcons = ev.currentTarget.children
         const noteType = ev.target.name
         var elIcons = ev.currentTarget.children
@@ -21,27 +23,40 @@ export class NotePreviewFotter extends React.Component {
                 const copy = this.state
                 copy.typeSelected = noteType
                 this.setState({ copy })
-                const stateX = this.props
-                console.log(stateX);
-                this.setState({note:stateX})
+                // const stateX = this.props
+                // console.log(stateX);
+                // this.setState({note:stateX})
+                var elId = el.props.note.note.info.id
+                var elCard
+                // console.log(elId);
                 switch (noteType) {
                     case 'tack':
-                        console.log('hello');
-                        this.props.note.title = 'yayy';
+                        // console.log(this.props.note.note.info.id)
+                        if (!elCard && elId && (elIcons[i].name + 'C' === iconColor)) {
+                            document.querySelector(`.${elId}`).style.order = null
+                        } else { document.querySelector(`.${elId}`).style.order = -1 }
                         return
-                    case 'chec':
+                        case 'chec':
+                            if (!elCard && elId && (elIcons[i].name + 'C' === iconColor)) {
+                            // console.log('helllllo');
+                            console.log(elCard);
+                            elCard = document.querySelector(`.${elId}`).style.border = null
+                            console.log(elCard);
+                        } else {console.log('helllllo'); document.querySelector(`.${elId}`).style.border = 3 + 'px solid' }
                         return
-                    case 'pain':
-                        return
-                    case 'edit':
-                        return
-                    case 'copy':
-                        return
-                    case 'tras':
-                        return
+                    //     case 'pain':
+                    //         return
+                    //     case 'edit':
+                    //         return
+                    //     case 'copy':
+                    //         return
+                        case 'tras':
+                            document.querySelector(`.${elId}`).style.display = 'none'
+                            return
 
                 }
             }
+
         }
     }
 

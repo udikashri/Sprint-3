@@ -20,6 +20,7 @@ function createNote(noteTxt, type) {
                 type: type,
                 isPinned: true,
                 info: {
+                    id: utilService.makeId(),
                     txt: noteTxt
                 }
             }
@@ -29,6 +30,7 @@ function createNote(noteTxt, type) {
             var newNote = {
                 type: type,
                 info: {
+                    id: utilService.makeId(),
                     url: `${noteTxt}`,
                     title: ''
                 },
@@ -44,6 +46,7 @@ function createNote(noteTxt, type) {
             var newNote = {
                 type: type,
                 info: {
+                    id: utilService.makeId(),
                     url: `${url}`,
                     title: ''
                 },
@@ -76,6 +79,7 @@ function createNote(noteTxt, type) {
             var newNote = {
                 type: type,
                 info: {
+                    id: utilService.makeId(),
                     url: `${noteTxt}`,
                     title: ''
                 },
