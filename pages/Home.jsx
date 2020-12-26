@@ -19,17 +19,16 @@ export class Home extends React.Component {
         const color = this.state.headerStyle.color;
         return (
             <section className="home-container">
-                <h2 style={{color:color, fontSize: this.fontSize}}>
-                    Home Sweet Home
-                </h2>
-                <section>
-                    <MissKeeperApp/>
-                </section>
+                <h1>
+                    PegaSus app
+                </h1>
+                <p>welcome to our amazing app</p>
+                <img src="../assets/img/home-pegasus.jpg"/>
 
-                <section className="home-mister-email">
-                    <MisterEmail/>
-                    </section>
+ 
             </section>
         )
     }
 }
+
+{/* <h1 style={{color:color, fontSize: this.fontSize}}> */}

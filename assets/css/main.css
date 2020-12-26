@@ -4,7 +4,8 @@
 
 @import 'basics/base.css';
 @import 'basics/forms.css';
-
+@import 'basics/home.css';
+@import 'basics/about.css';
 /* Components: */
 
 @import 'cmps/AppHeader.css';
@@ -19,7 +20,7 @@
 @import 'MissKeeper/MissKeeperApp.css';
 @import 'MisterEmail/EmailList.css';
 @import 'MisterEmail/EmailApp.css';
-@import 'basics/home.css';
+
 
 /* .title{
     background-color: brown;

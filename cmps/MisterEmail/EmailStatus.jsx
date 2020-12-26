@@ -5,7 +5,7 @@ export function EmailStatus({ emails }) {
     const prcent = Math.floor(100 * readEmails.length / (readEmails.length + unReadEmails.length))
     return (
 
-        <section >
+        <section className='email-status'>
 
             <div className="w3-border">{prcent}%
                 <div className="w3-orange" style={{height:`24px`,width:`${prcent}%`}}></div>

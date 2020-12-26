@@ -1,0 +1,21 @@
+
+.about-page {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    background-color: white;
+    text-align: center;
+}
+
+.about-page h1 {
+    font-size: 4rem;
+    color: rgb(204, 188, 163);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.about-page p{
+    font-size: 1.5rem;
+}
+

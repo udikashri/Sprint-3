@@ -1,5 +1,5 @@
     .email-list {
-        background-color: rgba(211, 211, 211, 0.349);
+        /* background-color: rgba(211, 211, 211, 0.349); */
         grid-area: 2/2/5/3;
     }
     /* .email-list>* {
@@ -30,8 +30,7 @@
         background-color: yellowgreen;
     }
     
-    .email .details,
-    .details {
+    .email .details, .details {
         width: 74vw;
         margin: 0%;
         padding: 0px 20px 40px 20px;

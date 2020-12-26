@@ -63,7 +63,6 @@ export class EmailApp extends React.Component {
 
 
     onSetFilter = (filterBy) => {
-        console.log(88);
         var copyFilterBy = this.state.filterBy;
         copyFilterBy[typeof filterBy] = filterBy;
         this.setState({ filterBy: copyFilterBy });
@@ -96,6 +95,7 @@ export class EmailApp extends React.Component {
     render() {
 
         const { emails, isComposeMinimize, isSelectExpand } = this.state
+        console.log(this.state.filterBy.boolean);
         return (
             <section className={'email-app'}>
 
@@ -106,26 +106,32 @@ export class EmailApp extends React.Component {
                 </div>
                 <div className='email-menu'>
                     <div className='compose-btn' onClick={() => { this.onNewEmail() }}><i className="fas fa-plus"></i> Compose</div>
+
                     <ul>
-                        <li onClick={(ev) => {
-                            ev.preventDefault(); //stops navigation
+                        <li className={this.state.filterBy.boolean && 'active-filter'} onClick={(ev) => {
+                            ev.preventDefault();
                             this.onSetFilter(true);
-                        }}><i className="far fa-envelope-open"></i> Read Mail</li>
-                        <li onClick={(ev) => {
-                            ev.preventDefault(); //stops navigation
+                        }}>< i className="far fa-envelope-open"></i> {this.state.filterBy.boolean}Read Mail</li>
+                        <li className={(!this.state.filterBy.boolean && this.state.filterBy.boolean!==null) && 'active-filter'} onClick={(ev) => {
+                            ev.preventDefault();
                             this.onSetFilter(false);
                         }}><i className="far fa-envelope"></i> Unread Mail</li>
-                        <li><i className="fas fa-inbox"></i> Inbox</li>
+                        <li  onClick={(ev) => {
+                            ev.preventDefault();
+                            this.onSetFilter(null);
+                        }}><i className="fas fa-inbox"></i> Inbox</li>
                         <li><i className="far fa-paper-plane"></i> Sent Mail</li>
                         <li><i className="fab fa-firstdraft"></i> Drafts</li>
 
                     </ul>
                 </div>
-                {!isComposeMinimize && <EmailCompose renderEmails={this.loadEmails} onNewEmail={this.onNewEmail} />}
-                {!isSelectExpand && <EmailList emails={this.getEmailForDisplay()} openEmail={this.state.selected}
-                    onSelectEmail={this.onSelectEmail} onDelete={this.onDelete} onExpand={this.onSelectExpand} isExpand={isSelectExpand}/>}
-                {isSelectExpand && <EmailDetails email={this.state.selected} onDelete={this.onDelete}  onExpand={this.onSelectExpand} isExpand={isSelectExpand}/>}
-            </section>
+                { !isComposeMinimize && <EmailCompose renderEmails={this.loadEmails} onNewEmail={this.onNewEmail} />}
+                {
+                    !isSelectExpand && <EmailList emails={this.getEmailForDisplay()} openEmail={this.state.selected}
+                        onSelectEmail={this.onSelectEmail} onDelete={this.onDelete} onExpand={this.onSelectExpand} isExpand={isSelectExpand} />
+                }
+                { isSelectExpand && <EmailDetails email={this.state.selected} onDelete={this.onDelete} onExpand={this.onSelectExpand} isExpand={isSelectExpand} />}
+            </section >
         )
     }
 }
