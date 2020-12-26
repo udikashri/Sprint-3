@@ -38,8 +38,9 @@ export class NotePreviewFotter extends React.Component {
                             const copy = this.state
                             copy.toggleIcons = false
                             this.setState({toggleIcons:copy})
+                            document.querySelector(`.${elId}`).style.order = -1 
+                        } else { 
                             document.querySelector(`.${elId}`).style.order = null
-                        } else { document.querySelector(`.${elId}`).style.order = -1 
                         const copy = this.state
                             copy.toggleIcons = true
                             this.setState({toggleIcons:copy})
@@ -50,12 +51,13 @@ export class NotePreviewFotter extends React.Component {
                                 const copy1 = this.state
                                 copy1.toggleIcons = false
                                 this.setState({toggleIcons1:copy1})
-                            elCard = document.querySelector(`.${elId}`).style.border = null
-                        } else {
-                            const copy1 = this.state
-                            copy1.toggleIcons = true
-                            this.setState({toggleIcons1:copy1})
-                           document.querySelector(`.${elId}`).style.border = 3 + 'px solid' }
+                                document.querySelector(`.${elId}`).style.border = 3 + 'px solid' 
+                            } else {
+                                const copy1 = this.state
+                                copy1.toggleIcons = true
+                                this.setState({toggleIcons1:copy1})
+                                elCard = document.querySelector(`.${elId}`).style.border = null
+                        }
                         return
                     //     case 'pain':
                     //         return
