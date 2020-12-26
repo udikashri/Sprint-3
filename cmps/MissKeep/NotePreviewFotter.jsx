@@ -42,14 +42,14 @@ export class NotePreviewFotter extends React.Component {
                     }
                         return
                         case 'chec':
-                            if (!elCard && elId && (elIcons[i].name + 'C' === iconColor)) {
+                            if (!elCard && elId && (elIcons[i].name  === iconColor)) {
                             // console.log('helllllo');
                             console.log((elIcons[i].name + 'C' === iconColor))
                             console.log(elCard);
                             elCard = document.querySelector(`.${elId}`).style.border = null
                             console.log(elCard);
                         } else {
-                            console.log((elIcons[i].name + 'C' === iconColor))
+                            console.log((elIcons[i].name + 'C' !== iconColor))
 
                             console.log('helllllo'); document.querySelector(`.${elId}`).style.border = 3 + 'px solid' }
                         return
