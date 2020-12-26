@@ -35,26 +35,27 @@ export class NotePreviewFotter extends React.Component {
                         
                         // console.log(this.props.note.note.info.id)
                         if (elId && (elIcons[i].name + 'C' === iconColor)) {
-                            console.log((elIcons[i].name + 'C' === iconColor))
+                            const copy = this.state
+                            copy.toggleIcons = false
+                            this.setState({toggleIcons:copy})
                             document.querySelector(`.${elId}`).style.order = null
                         } else { document.querySelector(`.${elId}`).style.order = -1 
-                        console.log((elIcons[i].name + 'C' === iconColor))
+                        const copy = this.state
+                            copy.toggleIcons = true
+                            this.setState({toggleIcons:copy})
                     }
                         return
                         case 'chec':
                             if (!elCard && elId && (elIcons[i].name  === iconColor)) {
-                            // console.log('helllllo');
-                            // console.log((elIcons[i].name + 'C' === iconColor))
-                            console.log(elCard);
+                                const copy1 = this.state
+                                copy1.toggleIcons = false
+                                this.setState({toggleIcons1:copy1})
                             elCard = document.querySelector(`.${elId}`).style.border = null
-                            console.log(elCard);
                         } else {
-                            // console.log((elIcons[i].name + 'C' !== iconColor))
-                            console.log('helllllo'); document.querySelector(`.${elId}`).style.border = 3 + 'px solid' }
-                            console.log((elIcons[i].name + 'C' !== iconColor))
-                            console.log((elIcons[i].name + 'C' === iconColor))
-                            console.log((elIcons[i].name === iconColor))
-                            console.log((elIcons[i].name !== iconColor))
+                            const copy1 = this.state
+                            copy1.toggleIcons = true
+                            this.setState({toggleIcons1:copy1})
+                           document.querySelector(`.${elId}`).style.border = 3 + 'px solid' }
                         return
                     //     case 'pain':
                     //         return
