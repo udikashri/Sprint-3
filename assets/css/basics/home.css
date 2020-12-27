@@ -1,6 +1,6 @@
 .home-container {
     background-color: #fff;
-    height: 78vh;
+    height: 80vh;
     text-align: center;
     font-size: 3.7rem;
     color: lightblue;
@@ -22,12 +22,16 @@
     text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
 }
 
-.home-img {
-    width: 80vw;
+.fotter {
+    margin: 0;
 }
 
 @media (max-width: 460px) {
-    .fotter {
-        margin: 0;
+    .home-img {
+        width: 80vw;
+    }
+    .home-container {
+        height: 78vh;
+        width: 98vw;
     }
 }

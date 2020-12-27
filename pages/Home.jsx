@@ -23,7 +23,7 @@ export class Home extends React.Component {
                     PegaSus app
                 </h1>
                 <p>welcome to our amazing app</p>
-                <img className={"home-img"} src="../assets/img/home-pegasus.jpg"/>
+                <img className={"home-img"} src="../assets/img/home-pegasus.png"/>
 
  
             </section>
