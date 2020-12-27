@@ -10,7 +10,7 @@ export class Home extends React.Component {
     get fontSize() {
         return this.state.headerStyle.fontSize + 'px'
     }
-    
+
     render() {
         const color = this.state.headerStyle.color;
         return (
@@ -19,7 +19,7 @@ export class Home extends React.Component {
                     PegaSus app
                 </h1>
                 <p>welcome to our amazing app</p>
-                <img className={"home-img"} src="../assets/img/home-pegasus.png"/>
+                <img className={"home-img"} src="assets/img/home-pegasus.png"/>
 
  
             </section>
