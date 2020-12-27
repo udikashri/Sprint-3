@@ -7,11 +7,14 @@ export function NoteTodos(props) {
     console.log(props.note.info.todos)
     return <div>
         <h1>{props.note.info.label}</h1>
-        <h2>{props.note.info.todos.map((txt,idx) => {
+        {props.note.info.todos.map((txt, idx) => {
             console.log(txt[idx]);
-            return txt.txt
+            return <h2 onClick={
+                () => {var elToggle =  document.querySelector(`${'.todos-txt' + idx}`)
+                if (elToggle.style.color === 'lightgray') {elToggle.style.color = 'black'}else {elToggle.style.color = 'lightgray'} }}
+                className={'todos-txt' + idx} key={idx}>{txt.txt}</h2>
 
-        })}</h2>
+        })}
         <br />
         <NotePreviewFotter note={props} />
     </div>

@@ -19,8 +19,9 @@ export class NotePreviewFotter extends React.Component {
         var elIcons = ev.currentTarget.children
         for (var i = 0; i < elIcons.length; i++) {
             const iconColor = elIcons[i].src.substring(33, 38)
+            console.log(iconColor);
             if (elIcons[i].name === noteType) {
-                (!this.state.toggleIcons) ? elIcons[i].src = `assets/img/${elIcons[i].name.substring(0, elIcons[i].name.length)}.png` : elIcons[i].src = `assets/img/${elIcons[i].name}C.png`
+                (elIcons[i].name + 'C' === iconColor ) ? elIcons[i].src = `assets/img/${elIcons[i].name.substring(0, elIcons[i].name.length)}.png` : elIcons[i].src = `assets/img/${elIcons[i].name}C.png`
                 const copy = this.state
                 copy.typeSelected = noteType
                 this.setState({ copy })
@@ -48,16 +49,16 @@ export class NotePreviewFotter extends React.Component {
                     }
                         return
                         case 'chec':
-                            if (elId && this.state.toggleIcons) {
-                                const copy2 = this.state
-                                copy2.toggleIcons = false
-                                this.setState({toggleIcons1:copy2})
-                                document.querySelector(`.${elId}`).style.border = 3 + 'px solid' 
+                            if (elIcons[i].name + 'C' === iconColor) {
+                                // const copy2 = this.state
+                                // copy2.toggleIcons = false
+                                // this.setState({toggleIcons1:copy2})
+                                document.querySelector(`.${elId}`).style.border = null
                             } else {
-                                const copy2 = this.state
-                                copy2.toggleIcons = true
-                                this.setState({toggleIcons1:copy2})
-                                elCard = document.querySelector(`.${elId}`).style.border = null
+                                // const copy2 = this.state
+                                // copy2.toggleIcons = true
+                                // this.setState({toggleIcons1:copy2})
+                                document.querySelector(`.${elId}`).style.border = 3 + 'px solid' 
                         }
                         return
                     //     case 'pain':
