@@ -1,7 +1,7 @@
 import {NotePreviewFotter} from 'NotePreviewFotter.jsx'
 export function NoteText(props){
 return <section>
-    <h1>{props.note.info.txt}</h1>
+    <h2>{props.note.info.txt}</h2>
     <br/>
     <NotePreviewFotter noteSelected={props.typeSelected} note={props}/>
     </section> 

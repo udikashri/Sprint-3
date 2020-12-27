@@ -5,7 +5,6 @@
 }
 
 .icons>img {
-    /* padding: 2px; */
     margin: 2px;
 }
 
@@ -21,6 +20,15 @@
     margin: 3vw 32vw;
 }
 
-.section-filter {
+.input-filter-misskeeper {
     margin-inline-start: 39.7vw;
+}
+
+@media (max-width: 460px) {
+    .input-filter-misskeeper {
+        margin-inline-start: 25.5vw;
+    }
+    .miss-keeper-form {
+        margin: 3vw 24vw;
+    }
 }

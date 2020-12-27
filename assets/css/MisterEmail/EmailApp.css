@@ -54,12 +54,14 @@ section.email-app {
     margin: 2px 27px;
 }
 
-.email-app form.input-email .close:hover, .email-app form.input-email .minimize:hover {
+.email-app form.input-email .close:hover,
+.email-app form.input-email .minimize:hover {
     cursor: pointer;
     background-color: rgb(110, 110, 110);
 }
 
-.email-app form.input-email input, .email-app form.input-email textarea {
+.email-app form.input-email input,
+.email-app form.input-email textarea {
     width: 98%;
     margin: 1%;
     border-radius: 0%;
@@ -159,24 +161,23 @@ section.email-app {
     .email-status .w3-border {
         margin: 5% 10%;
     }
-    .email-menu{
+    .email-menu {
         grid-area: 3/1/4/2;
         margin-left: 3%;
-
     }
-    .email-app .email-menu li{
+    .email-app .email-menu li {
         width: 50%;
     }
-    .email-list{
+    .email-list {
         grid-area: 4/1/5/2;
-
     }
-    .email .email-header{
+    .email .email-header {
         width: 96vw;
         margin: 0 2vw;
     }
-
-    .email .details, .details {
+    .email .details,
+    .details {
         width: 96vw;
         margin: 0 2vw;
+    }
 }

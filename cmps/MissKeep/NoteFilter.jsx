@@ -11,13 +11,11 @@ export class NoteFilter extends React.Component {
         this.setState({ name: ev.target.value }, callback);
     };
 
-
-
     render() {
         return (
             <section>
-                <input className="input-filter" type="text" name="name"
-                    placeholder="Search Note"
+                <input className="input-filter input-filter-misskeeper" type="text" name="name"
+                    placeholder="🔍 Note"
                     onChange={this.handleChange} />
 
 

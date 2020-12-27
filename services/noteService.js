@@ -59,6 +59,7 @@ function createNote(noteTxt, type) {
             return _saveNotesToStorage()
         case 'NoteTodos':
             console.log('hello');
+            var todo = noteTxt.split(',')
             var newNote = {
                 type: type,
                 info: {
@@ -66,8 +67,11 @@ function createNote(noteTxt, type) {
                     sentAt: Date.now(),
                     label: "How was it:",
                     todos: [
-                            { txt: "Do that!", doneAt: null },
-                            { txt: "Do this", doneAt: 187111111 }
+                            { txt: todo[0], doneAt: Date.now() },
+                            { txt: todo[1], doneAt: Date.now() },
+                            { txt: todo[2], doneAt: Date.now() },
+                            { txt: todo[3], doneAt: Date.now() },
+                            { txt: todo[4], doneAt: Date.now() },
                         ]
                         // 
                 }

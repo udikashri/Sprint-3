@@ -1,19 +1,13 @@
 import { NotePreviewFotter } from 'NotePreviewFotter.jsx'
 
 export function NoteTodos(props) {
-    props.note.info.todos.map((txt) => {
-        console.log(txt)
-    })
-    console.log(props.note.info.todos)
     return <div>
-        <h1>{props.note.info.label}</h1>
+        <h2>{props.note.info.label}</h2>
         {props.note.info.todos.map((txt, idx) => {
-            console.log(txt[idx]);
-            return <h2 onClick={
-                () => {var elToggle =  document.querySelector(`${'.todos-txt' + idx}`)
-                if (elToggle.style.color === 'lightgray') {elToggle.style.color = 'black'}else {elToggle.style.color = 'lightgray'} }}
-                className={'todos-txt' + idx} key={idx}>{txt.txt}</h2>
-
+            return <h3 onClick={
+                (ev) => {
+                if (ev.target.style.color === 'lightgray') {ev.target.style.color = 'black'}else {ev.target.style.color = 'lightgray'} }}
+                className={'todos-txt' + idx} key={props.note.info.id && idx}>{txt.txt}</h3>
         })}
         <br />
         <NotePreviewFotter note={props} />

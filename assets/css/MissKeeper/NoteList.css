@@ -5,15 +5,13 @@
 }
 
 .note-list>section>* {
-    /* display: inline-block; */
-    margin: 5px 3vw;
+    margin: 1.7vh 3vw;
     border: 1.8px solid lightcyan;
     border-radius: 10px;
     padding: 5px;
     width: 20vw;
     min-width: 200px;
     min-height: 15vh;
-    /* height: 30vh; */
     text-align: center;
     text-transform: capitalize;
     justify-items: center;
@@ -24,12 +22,8 @@
     height: 12em;
 }
 
-.trash-icon>img {
-    /* display: flex;
-    align-self: flex-end; */
-    float: inline-end;
-}
-
-.ping {
-    order: -1
+@media (max-width: 460px) {
+    .note-list>section>* {
+        width: 80vw;
+    }
 }

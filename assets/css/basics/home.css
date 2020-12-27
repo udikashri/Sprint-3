@@ -1,18 +1,8 @@
 .home-container {
-    /* display: grid;
-    grid-template-columns: repeat(2, 50vw); */
-    /* background-color: rgba(5, 11, 15, 0.322); */
-}
-
-/* .home-container .home-mister-email {
-    grid-area: 1/1/5/2;
-} */
-
-.home-container {
     background-color: #fff;
-    height: 80vh;
+    height: 78vh;
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 3.7rem;
     color: lightblue;
     display: flex;
     flex-direction: column;
@@ -21,7 +11,7 @@
 
 .home-container h1 {
     color: lightblue;
-    font-size: 4.5rem;
+    font-size: 3.7rem;
     font-weight: revert;
     margin-top: 3vh;
 }
@@ -30,4 +20,14 @@
     color: gold;
     margin-top: 30px;
     text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+}
+
+.home-img {
+    width: 80vw;
+}
+
+@media (max-width: 460px) {
+    .fotter {
+        margin: 0;
+    }
 }

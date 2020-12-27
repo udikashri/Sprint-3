@@ -4,16 +4,7 @@ export class NotePreviewFotter extends React.Component {
         toggleIcons: true
     }
 
-    componentDidMount() {
-        console.log(this.props)
-        // document.querySelector('.7DYSTW').style.order = -1
-
-    }
-
-
     handleFotterClick = (ev, el) => {
-        // console.log(el.props.note.note.info.id);
-        console.log(this.props);
         var elIcons = ev.currentTarget.children
         const noteType = ev.target.name
         var elIcons = ev.currentTarget.children
@@ -25,48 +16,27 @@ export class NotePreviewFotter extends React.Component {
                 const copy = this.state
                 copy.typeSelected = noteType
                 this.setState({ copy })
-                // const stateX = this.props
-                // console.log(stateX);
-                // this.setState({note:stateX})
                 var elId = el.props.note.note.info.id
-                var elCard
-                // console.log(elId);
                 switch (noteType) {
-                    case 'tack':
-                        
-                        // console.log(this.props.note.note.info.id)
+                    case 'tack': 
                         if (elId && this.state.toggleIcons) {
                             const {toggleIcons} = this.state
                             console.log(this.state);
-                            // copy1.toggleIcons = false
                             this.setState({toggleIcons:false})
                             document.querySelector(`.${elId}`).style.order = -1 
                         } else { 
                             document.querySelector(`.${elId}`).style.order = null
                         const {toggleIcons} = this.state
-                            // copy1.toggleIcons = true
                             this.setState({toggleIcons:true})
                     }
                         return
                         case 'chec':
                             if (elIcons[i].name + 'C' === iconColor) {
-                                // const copy2 = this.state
-                                // copy2.toggleIcons = false
-                                // this.setState({toggleIcons1:copy2})
                                 document.querySelector(`.${elId}`).style.border = null
                             } else {
-                                // const copy2 = this.state
-                                // copy2.toggleIcons = true
-                                // this.setState({toggleIcons1:copy2})
                                 document.querySelector(`.${elId}`).style.border = 3 + 'px solid' 
                         }
                         return
-                    //     case 'pain':
-                    //         return
-                    //     case 'edit':
-                    //         return
-                    //     case 'copy':
-                    //         return
                         case 'tras':
                             document.querySelector(`.${elId}`).style.display = 'none'
                             return
