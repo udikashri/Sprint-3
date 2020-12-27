@@ -29,6 +29,7 @@
 
 .app-header nav li {
     width: 130px;
+    /* padding: 2px 0; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,14 +42,14 @@
     border-left: 1px solid;
 }
 
-nav .active, nav .my-active {
+nav .active,
+nav .my-active {
     color: chocolate;
     text-decoration: underline;
 }
 
 .center {
     flex-grow: 10;
-    /* text-align: center; */
     margin-left: 10%;
 }
 
@@ -61,13 +62,11 @@ nav .active, nav .my-active {
     .app-header nav ul {
         flex-direction: column;
         flex-grow: 1;
-    margin-right: 0%;
-
+        margin-right: 0%;
     }
     .app-header nav li {
         width: 100vw;
         height: auto;
-    border-top: 1px solid;
-
+        border-top: 1px solid;
     }
 }

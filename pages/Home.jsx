@@ -7,15 +7,11 @@ export class Home extends React.Component {
             fontSize: 15
         }
     }
-    // Getter function:
     get fontSize() {
         return this.state.headerStyle.fontSize + 'px'
     }
-    componentDidMount() {}
     
-
     render() {
-        // Destructering
         const color = this.state.headerStyle.color;
         return (
             <section className="home-container">
@@ -30,5 +26,3 @@ export class Home extends React.Component {
         )
     }
 }
-
-{/* <h1 style={{color:color, fontSize: this.fontSize}}> */}

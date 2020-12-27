@@ -10,7 +10,6 @@ h1 {
 body {
     background-color: rgba(211, 211, 211, 0.349);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* background-image: url("../../img/intro-1591382762.jpg"); */
     margin: 0;
     padding: 0;
 }
@@ -28,10 +27,13 @@ nav ul {
     margin-top: 0;
 }
 
+nav {
+    width: 98vw;
+}
+
 footer {
     text-align: center;
     border-top: 1px solid gray;
-    margin-top: 10vh;
 }
 
 .debug * {
@@ -55,12 +57,6 @@ footer {
 audio {
     width: 200px;
 }
-
-
-/* 
-img {
-    width: 10%;
-} */
 
 button {
     border-radius: 10em;

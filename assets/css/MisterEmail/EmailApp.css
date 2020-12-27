@@ -12,7 +12,7 @@ section.email-app {
 
 .email-app form.input-email {
     grid-area: 3/1/4/2;
-    max-width: 4000px;
+    /* max-width: 100%; */
     margin-top: 2.9vh;
     background-color: rgb(47, 47, 47);
     padding: 0;
@@ -25,7 +25,7 @@ section.email-app {
 }
 
 .email-app form.input-email .form-header {
-    width: 520px;
+    /* width: 520px; */
     font-size: 1.25rem;
     color: whitesmoke;
     background-color: rgb(24, 24, 24);
@@ -150,6 +150,9 @@ section.email-app {
         grid-template-columns: 100vw;
         grid-template-rows: 40px 80px 1fr 1fr;
     }
+    .email-app form.input-email {
+        width: 92vw;
+    }
     .email-filter {
         grid-area: 1/1/2/2;
         margin: 0;
@@ -157,13 +160,15 @@ section.email-app {
     }
     .email-status {
         grid-area: 2/1/2/2;
+        width: 98vw;
     }
     .email-status .w3-border {
         margin: 5% 10%;
     }
     .email-menu {
         grid-area: 3/1/4/2;
-        margin-left: 3%;
+        width: 98vw;
+        /* margin-left: 3%; */
     }
     .email-app .email-menu li {
         width: 50%;

@@ -15,7 +15,7 @@ export class NoteFilter extends React.Component {
         return (
             <section>
                 <input className="input-filter input-filter-misskeeper" type="text" name="name"
-                    placeholder="🔍 Note"
+                    placeholder="🔍 Search Note"
                     onChange={this.handleChange} />
 
 

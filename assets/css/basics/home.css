@@ -22,16 +22,11 @@
     text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
 }
 
-.fotter {
-    margin: 0;
-}
-
 @media (max-width: 460px) {
     .home-img {
         width: 80vw;
     }
     .home-container {
         height: 78vh;
-        width: 98vw;
     }
 }

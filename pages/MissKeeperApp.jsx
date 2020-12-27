@@ -20,8 +20,6 @@ export class MissKeeperApp extends React.Component {
 
     }
 
-    componentWillUnmount() {
-    }
 
     loadNotes = () => {
         noteService.query().then(notes => {
@@ -54,6 +52,7 @@ export class MissKeeperApp extends React.Component {
     //     this.state({noteTypeSelected:type})
     // } 
     handleClick = (ev) => {
+        this.ev.preventDefault()
         const noteType = ev.target.name
         var elIcons = ev.currentTarget.children
         for (var i = 0 ; i<elIcons.length;i++){
