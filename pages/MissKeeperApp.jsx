@@ -29,9 +29,7 @@ export class MissKeeperApp extends React.Component {
 
     onAddNote = (ans) => {
         const copy = this.state.newNote
-        console.log(ans);
         copy.txt = ans;
-        console.log(copy);
         this.setState({ newNote: copy })
 
     }
@@ -43,7 +41,6 @@ export class MissKeeperApp extends React.Component {
     }
 
     onSetFilter = (filterBy) => {
-        console.log('filterBy:', filterBy);
         this.setState({ filterBy });
     }
 
@@ -55,7 +52,6 @@ export class MissKeeperApp extends React.Component {
         const noteType = ev.target.name
         var elIcons = ev.currentTarget.children
         for (var i = 0 ; i<elIcons.length;i++){
-            console.log(elIcons[i]);
             if(elIcons[i].name !== noteType) {
                 elIcons[i].src = `assets/img/${elIcons[i].name}.png`
             }else {
@@ -76,7 +72,6 @@ export class MissKeeperApp extends React.Component {
                         Create A Note
                         <input placeholder={this.state.newNote.txt} onChange={(ev) => {
                             ev.preventDefault()
-                            console.log(ev.target.value);
                             this.onAddNote(ev.target.value)
 
                         }} />
